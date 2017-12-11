@@ -1,12 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MenuModule, PanelModule } from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SettingsComponent } from './settings/settings.component';
+import { StatisticComponent } from './statistic/statistic.component';
 
+import {MenuModule, PanelModule, ChartModule } from 'primeng/primeng';
+
+import 'hammerjs';
+import { MyFormComponent } from './my-form/my-form.component';
+
+import { MatButtonModule, MatInputModule, MatFormFieldModule} from '@angular/material';
+import { ApiService } from './api.service';
+import { HttpModule } from '@angular/http';
 
 const appRoutes: Routes = [
   { path: 'settings', component: SettingsComponent }
@@ -15,16 +24,24 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    SettingsComponent
+    SettingsComponent,
+    StatisticComponent,
+    MyFormComponent
   ],
   imports: [
     BrowserModule,
     PanelModule,
     MenuModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ChartModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    HttpModule,
+    MatButtonModule
        ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
