@@ -13,7 +13,7 @@ import {MenuModule, PanelModule, ChartModule } from 'primeng/primeng';
 import 'hammerjs';
 import { MyFormComponent } from './my-form/my-form.component';
 
-import { MatButtonModule, MatInputModule, MatFormFieldModule} from '@angular/material';
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCardModule } from '@angular/material';
 import { ApiService } from './api.service';
 import { HttpModule } from '@angular/http';
 
@@ -39,7 +39,8 @@ const appRoutes: Routes = [
     FormsModule,
     MatFormFieldModule,
     HttpModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule
        ],
   providers: [ApiService],
   bootstrap: [AppComponent]
