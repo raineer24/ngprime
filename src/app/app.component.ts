@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiService } from './api.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,9 +8,5 @@ import { ApiService } from './api.service';
 export class AppComponent {
   title = 'Eos';
 
-  constructor( private apiService: ApiService) {}
-
-  ngOnInit() {
-  	this.apiService.getMessages();
-  }
+  
 }

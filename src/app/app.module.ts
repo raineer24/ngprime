@@ -16,6 +16,7 @@ import { MyFormComponent } from './my-form/my-form.component';
 import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCardModule } from '@angular/material';
 import { ApiService } from './api.service';
 import { HttpModule } from '@angular/http';
+import { MessagesComponent } from './messages.component';
 
 const appRoutes: Routes = [
   { path: 'settings', component: SettingsComponent }
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     AppComponent,
     SettingsComponent,
     StatisticComponent,
-    MyFormComponent
+    MyFormComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
