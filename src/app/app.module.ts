@@ -13,13 +13,16 @@ import {MenuModule, PanelModule, ChartModule } from 'primeng/primeng';
 import 'hammerjs';
 import { MyFormComponent } from './my-form/my-form.component';
 
-import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCardModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatCardModule, MatToolbarModule } from '@angular/material';
 import { ApiService } from './api.service';
 import { HttpModule } from '@angular/http';
 import { MessagesComponent } from './messages.component';
+import { RegisterComponent } from './register.component';
+
 
 const appRoutes: Routes = [
-  { path: 'settings', component: SettingsComponent }
+  { path: 'settings', component: SettingsComponent },
+  { path: 'register', component: RegisterComponent }
 ];
 
 @NgModule({
@@ -28,7 +31,8 @@ const appRoutes: Routes = [
     SettingsComponent,
     StatisticComponent,
     MyFormComponent,
-    MessagesComponent
+    MessagesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,9 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     HttpModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    RouterModule
        ],
   providers: [ApiService],
   bootstrap: [AppComponent]
