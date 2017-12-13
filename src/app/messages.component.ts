@@ -4,7 +4,7 @@ import { ApiService } from './api.service';
 @Component({
   selector: 'messages',
   template: `<div *ngFor="let message of apiService.messages">
-									<mat-card>{{message.message}}</mat-card>
+									{{message.message}}
 							</div>`
 })
 export class MessagesComponent {

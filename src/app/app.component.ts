@@ -3,12 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  	<mat-toolbar>
+  	
   		EOS Social
-  		<span style="flex: 1 1 auto"></span>
-  		<button matbutton routerLink="/register">Register</button>
-  	</mat-toolbar>
+  		
+  		<button pButton type="button" routerLink="/register" label="Register"></button>
+  	
   	<router-outlet></router-outlet>
+
+
   `,
   styleUrls: ['./app.component.css']
 })
